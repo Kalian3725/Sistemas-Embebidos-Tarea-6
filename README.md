@@ -17,3 +17,26 @@ El código implementado gestiona la transición secuencial de varios protocolos 
 5. **Estado Deep Sleep:** El sistema desactiva el CPU y la memoria RAM principal para un mayor ahorro (LED amarillo). Retiene únicamente la memoria RTC. Al despertar tras 10 segundos o por botón, el chip se reinicia completamente (vuelve al inicio del setup()).
 
 6. **Estado Hibernación:** Al volver a encender desde el Deep Sleep, el sistema entra en hibernación (LED rojo). Aquí apaga incluso el oscilador principal y los periféricos del RTC, reduciendo el consumo al mínimo absoluto. Solo puede despertar mediante el botón físico para reiniciar el ciclo completo.
+
+# Instrucciones de compilación y ejecución.
+1. Bajar el repositorio
+2. Importar la carpeta del repositorio al area de trabajo de Platform.io
+3. Abrir el archivo `diagram.json`
+4. Ejecutar la simulación
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
