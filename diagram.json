@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "Kal",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 15.8,
+      "left": -144,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -34.4,
+      "left": 145.1,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 52.8,
+      "left": -48.55,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "rgb1:R", "esp:18", "red", [ "v0" ] ],
+    [ "rgb1:COM", "esp:GND.3", "black", [ "v0" ] ],
+    [ "rgb1:G", "esp:19", "green", [ "v0" ] ],
+    [ "rgb1:B", "esp:21", "blue", [ "v0" ] ],
+    [ "btn1:2.r", "esp:GND.1", "green", [ "h19.4", "v105.8" ] ],
+    [ "r1:1", "esp:3V3", "green", [ "v0" ] ],
+    [ "r1:2", "esp:32", "green", [ "h0" ] ],
+    [ "btn1:1.r", "esp:32", "green", [ "v0", "h38.6", "v57.6" ] ]
+  ],
+  "dependencies": {}
+}
